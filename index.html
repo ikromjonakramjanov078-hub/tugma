@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080808">
+  <title>NEON QOCHQIN — Oltin o‘yin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="background-glow glow-one"></div>
+  <div class="background-glow glow-two"></div>
+
+  <main class="game">
+    <header class="header">
+      <div class="logo">N<span>Q</span></div>
+      <div>
+        <p class="eyebrow">NEON ARCADE / 001</p>
+        <h1>SICHQONCHADAN <span>QOCH!</span></h1>
+        <p class="subtitle">Uni ushlay olasanmi? 😈</p>
+      </div>
+    </header>
+
+    <section class="dashboard">
+      <div class="stat-card">
+        <span class="stat-label">OCHKO</span>
+        <strong id="score">0</strong>
+      </div>
+      <div class="stat-card timer-card">
+        <span class="stat-label">QOLGAN VAQT</span>
+        <strong><span id="timer">30</span><small> sek</small></strong>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">REKORD</span>
+        <strong id="bestScore">0</strong>
+      </div>
+    </section>
+
+    <section class="settings">
+      <label for="difficulty">QIYINLIK DARAJASI</label>
+      <select id="difficulty">
+        <option value="easy">Oson</option>
+        <option value="medium" selected>O‘rta</option>
+        <option value="hard">Qiyin</option>
+      </select>
+      <button id="startBtn" class="start-btn">▶ O‘YINNI BOSHLASH</button>
+    </section>
+
+    <section class="arena-section">
+      <div class="arena-heading">
+        <span><i class="live-dot"></i> O‘YIN MAYDONI</span>
+        <span id="levelLabel">DARАJA: O‘RTA</span>
+      </div>
+
+      <div id="arena" class="arena">
+        <div class="arena-grid"></div>
+        <div class="corner corner-tl"></div>
+        <div class="corner corner-tr"></div>
+        <div class="corner corner-bl"></div>
+        <div class="corner corner-br"></div>
+
+        <div id="intro" class="overlay">
+          <div class="target-icon">✦</div>
+          <h2>TAYYORMISAN?</h2>
+          <p>O‘yin boshlangach, qochqin tugmani ushla!</p>
+          <span class="hint">30 SONIYA • CHEKSIZ IMKONIYAT</span>
+        </div>
+
+        <button id="runner" class="runner" type="button" disabled>
+          <span class="runner-icon">⚡</span>
+          <span id="runnerText">MENI USHLA!</span>
+        </button>
+
+        <div id="resultOverlay" class="overlay result-overlay hidden">
+          <div class="target-icon">🏆</div>
+          <h2 id="resultTitle">VAQT TUGADI!</h2>
+          <p id="resultMessage">Yaxshi harakat!</p>
+          <div class="final-score"><span>JAMI OCHKO</span><strong id="finalScore">0</strong></div>
+          <button id="againBtn" class="start-btn">↻ QAYTA O‘YNASH</button>
+        </div>
+      </div>
+
+      <p id="message" class="message" aria-live="polite">
+        O‘yinni boshlash uchun yuqoridagi tugmani bos!
+      </p>
+    </section>
+
+    <section class="instructions">
+      <div class="instruction-icon">⌖</div>
+      <div>
+        <h3>QANDAY O‘YNALADI?</h3>
+        <p>O‘yinni boshlang. Kursorni oltin tugmaga olib boring yoki uni bosishga harakat qiling. Har bir muvaffaqiyatli bosish uchun ochko olasiz. Tugma esa qochishga urinadi!</p>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-line"></div>
+      <p>YARATUVCHI</p>
+      <h3>AKRAMJONOVA <span>JADRA MARATOVNA</span></h3>
+      <small>BLACK × GOLD NEON EXPERIENCE</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
